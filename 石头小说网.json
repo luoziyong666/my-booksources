@@ -1,9 +1,9 @@
 [
   {
-    "bookSourceName": "石头小说",
+    "bookSourceName": "石头小说新版",
     "bookSourceUrl": "https://www.shitouxs.com",
     "bookSourceType": 0,
-    "bookSourceGroup": "网络",
+    "bookSourceGroup": "网络小说",
     "loginUrl": "",
     "bookUrlPattern": "",
     "searchUrl": "https://www.shitouxs.com/search.php?keyword={{key}}",
@@ -13,44 +13,46 @@
     "weight": 0,
     "lastUpdateTime": 0,
     "ruleSearch": {
-      "bookList": "//div[@class='library']/ul/li",
-      "name": "//h3/a/text()",
-      "author": "//p[@class='author']/text()",
-      "cover": "//div[@class='pic']/img/@src",
-      "intro": "//p[@class='review']/text()",
-      "kind": "//p[@class='type']/text()",
-      "lastChapter": "//p[@class='update']/a/text()",
-      "wordCount": "",
-      "bookUrl": "//h3/a/@href"
+      "bookList": "class.library@class.book-cover@tag.li",
+      "name": "tag.h3@tag.a@text",
+      "author": "tag.p@class.author@text",
+      "cover": "tag.img@src",
+      "intro": "tag.p@class.review@text",
+      "kind": "tag.p@class.type@text",
+      "lastChapter": "tag.p@class.update@tag.a@text",
+      "bookUrl": "tag.h3@tag.a@href"
     },
     "ruleBookInfo": {
-      "name": "//div[@class='book-info']/h1/text()",
-      "author": "//div[@class='book-info']/p[1]/text()",
-      "cover": "//div[@class='book-img']/img/@src",
-      "intro": "//div[@class='book-intro']/p/text()",
-      "kind": "//div[@class='book-info']/p[2]/text()",
-      "lastChapter": "//div[@class='book-info']/p[3]/a/text()",
-      "wordCount": "//div[@class='book-info']/p[4]/text()",
-      "status": "//div[@class='book-info']/p[5]/text()",
+      "init": "",
+      "name": "class.book-info@tag.h1@text",
+      "author": "class.book-info@tag.p.0@text##作者：",
+      "cover": "class.book-img@tag.img@src",
+      "intro": "class.book-intro@tag.p@text",
+      "kind": "class.book-info@tag.p.1@text##类型：",
+      "lastChapter": "class.book-info@tag.p.2@tag.a@text",
+      "wordCount": "class.book-info@tag.p.3@text##字数：",
+      "status": "class.book-info@tag.p.4@text##状态：",
       "updateTime": ""
     },
     "ruleToc": {
-      "chapterList": "//div[@class='chapter-list']/ul/li/a",
-      "chapterName": "text()",
-      "chapterUrl": "@href",
-      "updateTime": "",
-      "isVip": ""
+      "chapterList": "class.chapter-list@tag.ul@tag.li@tag.a",
+      "chapterName": "text",
+      "chapterUrl": "href",
+      "isVip": "",
+      "updateTime": ""
     },
     "ruleContent": {
-      "content": "//div[@id='content']/text()",
-      "nextContentUrl": "//a[@id='next']/@href",
+      "content": "id.content@textNodes",
+      "nextContentUrl": "tag.a@id.next@href",
+      "replaceRegex": "(石头小说网|www.shitouxs.com|https://www.shitouxs.com|笔趣阁|\\s*手机站m\\.shitouxs\\.com|\\s*电脑站www\\.shitouxs\\.com)",
       "image": "",
       "source": "",
-      "replaceRegex": "[石头小说网\\s*www.shitouxs.com\\s*https://www.shitouxs.com]"
+      "filter": ""
     },
-    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"}",
-    "concurrentRate": "0",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36\"}",
+    "concurrentRate": "5",
     "loginUi": "",
-    "exploreUi": ""
+    "exploreUi": "",
+    "comment": "石头小说网书源-2024更新版"
   }
 ]
