@@ -1,0 +1,53 @@
+[
+  {
+    "bookSourceName": "石头小说备用",
+    "bookSourceUrl": "https://www.shitouxs.com",
+    "bookSourceType": 0,
+    "bookSourceGroup": "网络小说",
+    "loginUrl": "",
+    "bookUrlPattern": "",
+    "searchUrl": "https://www.shitouxs.com/search.php?q={{key}}",
+    "exploreUrl": "",
+    "enabled": true,
+    "enabledExplore": false,
+    "weight": 0,
+    "lastUpdateTime": 0,
+    "ruleSearch": {
+      "bookList": "js:.book-list || .book-item || li",
+      "name": "js:.book-name || h3 || h2 || a@text",
+      "author": "js:.author || .book-author@text",
+      "cover": "js:img@src",
+      "intro": "js:.intro || .description@text",
+      "kind": "js:.category || .type@text",
+      "lastChapter": "js:.latest-chapter || .update@text",
+      "bookUrl": "js:a@href"
+    },
+    "ruleBookInfo": {
+      "name": "js:.book-title || h1@text",
+      "author": "js:.book-author@text##作者：",
+      "cover": "js:.book-cover img@src",
+      "intro": "js:.book-intro || .description@text",
+      "kind": "js:.book-category@text",
+      "lastChapter": "js:.latest-chapter a@text",
+      "wordCount": "js:.book-wordcount@text",
+      "status": "js:.book-status@text"
+    },
+    "ruleToc": {
+      "chapterList": "js:.chapter-list li a || .chapters li a",
+      "chapterName": "text",
+      "chapterUrl": "href",
+      "isVip": "js:.vip@class##vip"
+    },
+    "ruleContent": {
+      "content": "js:.content || #content || .chapter-content@html##<script[^>]*>[\\s\\S]*?<\\/script>|<div[^>]*>(广告|推荐)|<a[^>]*>[\\s\\S]*?<\\/a>",
+      "nextContentUrl": "js:.next@href",
+      "replaceRegex": "(石头小说网|www\\.shitouxs\\.com|请收藏本站|https?:\\/\\/[^\\s]*)",
+      "filter": "js:script,div[class*='ad'],div[class*='AD']"
+    },
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\", \"Referer\": \"https://www.shitouxs.com/\"}",
+    "concurrentRate": "3",
+    "loginUi": "",
+    "exploreUi": "",
+    "comment": "备用书源-使用JS选择器"
+  }
+]
