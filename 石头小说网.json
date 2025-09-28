@@ -1,0 +1,56 @@
+[
+  {
+    "bookSourceName": "石头小说",
+    "bookSourceUrl": "https://www.shitouxs.com",
+    "bookSourceType": 0,
+    "bookSourceGroup": "网络",
+    "loginUrl": "",
+    "bookUrlPattern": "",
+    "searchUrl": "https://www.shitouxs.com/search.php?keyword={{key}}",
+    "exploreUrl": "",
+    "enabled": true,
+    "enabledExplore": false,
+    "weight": 0,
+    "lastUpdateTime": 0,
+    "ruleSearch": {
+      "bookList": "//div[@class='library']/ul/li",
+      "name": "//h3/a/text()",
+      "author": "//p[@class='author']/text()",
+      "cover": "//div[@class='pic']/img/@src",
+      "intro": "//p[@class='review']/text()",
+      "kind": "//p[@class='type']/text()",
+      "lastChapter": "//p[@class='update']/a/text()",
+      "wordCount": "",
+      "bookUrl": "//h3/a/@href"
+    },
+    "ruleBookInfo": {
+      "name": "//div[@class='book-info']/h1/text()",
+      "author": "//div[@class='book-info']/p[1]/text()",
+      "cover": "//div[@class='book-img']/img/@src",
+      "intro": "//div[@class='book-intro']/p/text()",
+      "kind": "//div[@class='book-info']/p[2]/text()",
+      "lastChapter": "//div[@class='book-info']/p[3]/a/text()",
+      "wordCount": "//div[@class='book-info']/p[4]/text()",
+      "status": "//div[@class='book-info']/p[5]/text()",
+      "updateTime": ""
+    },
+    "ruleToc": {
+      "chapterList": "//div[@class='chapter-list']/ul/li/a",
+      "chapterName": "text()",
+      "chapterUrl": "@href",
+      "updateTime": "",
+      "isVip": ""
+    },
+    "ruleContent": {
+      "content": "//div[@id='content']/text()",
+      "nextContentUrl": "//a[@id='next']/@href",
+      "image": "",
+      "source": "",
+      "replaceRegex": "[石头小说网\\s*www.shitouxs.com\\s*https://www.shitouxs.com]"
+    },
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36\"}",
+    "concurrentRate": "0",
+    "loginUi": "",
+    "exploreUi": ""
+  }
+]
